@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -44,12 +45,12 @@ export default function Login() {
               />
 
               {/* Login Button */}
-              <button
+              <Button
                 onClick={handleLogin}
                 className="w-full py-3 rounded-sm bg-white text-[#275152] font-semibold hover:bg-white/90 transition-colors text-sm mt-4"
               >
                 Login
-              </button>
+              </Button>
 
               <div className="text-center">
                 <Link

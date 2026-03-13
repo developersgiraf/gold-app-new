@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, TrendingDown, IndianRupee } from "lucide-react";
+import { TrendingDown, IndianRupee } from "lucide-react";
 import type { GoldRateCards } from "@/js/types/gold-rate";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -11,6 +11,7 @@ import {
   CardDescription,
 } from "@/components/cards";
 import { Button } from "@/components/button";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 const goldratedatav: GoldRateCards[] = [
   {
@@ -39,17 +40,10 @@ export default function Index() {
   }, []);
 
   return (
-    <>
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl min-h-screen bg-[#093D39] overflow-hidden relative p-4 sm:p-6 pb-48 sm:pb-56">
-          <div className="flex items-center gap-2 sm:gap-4 mt-12 sm:mt-18 ml-2 sm:ml-3">
-            <Menu className="text-white w-5 h-5 sm:w-6 sm:h-6" />
-            <h4 className="text-white text-left text-lg sm:text-xl font-medium">
-              Gold Rate Dashboard
-            </h4>
-          </div>
-
-          <h4 className="text-center text-white text-xl sm:text-2xl lg:text-3xl font-bold mt-10 sm:mt-15 tracking-wider">
+    <LayoutWrapper title="Gold Rate Dashboard">
+      <div className="flex justify-center">
+        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl min-h-screen bg-[#093D39] relative p-4 sm:p-6">
+          <h4 className="text-center text-white text-xl sm:text-2xl lg:text-3xl font-bold mt-10 sm:mt-5 tracking-wider">
             Today&apos;s Gold Rate
           </h4>
           <p className="text-center text-amber-400 tracking-wider text-base sm:text-lg font-medium">
@@ -83,7 +77,7 @@ export default function Index() {
             </h5>
           </div>
 
-          <footer className="absolute bottom-20 left-0 w-full p-4 sm:p-6 bg-[#093D39] text-center text-white text-xs sm:text-sm">
+          <footer className="absolute bottom-30 left-0 w-full p-4 sm:p-6 bg-[#093D39] text-center text-white text-xs sm:text-sm">
             <div className="space-y-3 sm:space-y-4">
               <Button
                 className="w-full !bg-gradient-to-r from-[#FB9600] to-[#E27300] !text-white p-5 sm:p-7 rounded-xl text-base sm:text-lg font-bold"
@@ -102,6 +96,6 @@ export default function Index() {
           </footer>
         </div>
       </div>
-    </>
+    </LayoutWrapper>
   );
 }

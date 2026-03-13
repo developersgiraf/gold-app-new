@@ -56,10 +56,12 @@ export default function RootLayout({
         className={`${montserrat.variable} antialiased`}
       >
         <PWARegister />
-        <div className="max-w-sm mx-auto min-h-screen bg-white">
-      {children}
-    </div>
+        <div className="max-w-sm mx-auto min-h-screen relative overflow-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );
 }
+
+

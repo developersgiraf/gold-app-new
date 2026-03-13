@@ -1,21 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { Menu } from "lucide-react";
 
-export default function Header() {
-  const [istime, setIstime] = useState(true);
+interface HeaderProps {
+  onMenuClick: () => void;
+  title?: string;
+  showBackground?: boolean;
+}
+
+export default function Header({ onMenuClick, title, showBackground = true }: HeaderProps) {
   return (
     <>
-      <div className="flex">
-        <div className="text-white p-4 text-left font-semibold">
-          {istime
-            ? new Date().toLocaleTimeString("en-US", {
-                hour: "2-digit",
-                minute: "2-digit",
-                hour12: false,
-              })
-            : "Gold App"}
-        </div>
+      <div className={`flex items-center sticky top-0 z-30 pt-15 ${showBackground ? 'bg-[#093D39]' : ''}`}>
+        <button
+          onClick={onMenuClick}
+          className="p-4 text-white hover:bg-white/10 transition-colors flex-shrink-0"
+          aria-label="Open menu"
+        >
+          <Menu size={24} />
+        </button>
+        
+        {title && (
+          <h4 className="text-white text-lg sm:text-xl font-medium flex-1 pr-4">
+            {title}
+          </h4>
+        )}
       </div>
     </>
   );

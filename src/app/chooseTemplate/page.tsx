@@ -26,8 +26,8 @@ export default function TemplateChoosen() {
     ]
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen bg-gray-50">
-        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl min-h-screen">
+      <div className="flex justify-center bg-gray-50">
+        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
           
           {/* Header Section with Dark Background */}
           <div className="bg-[#093D39] px-4 sm:px-6 pt-12 pb-8 rounded-b-2xl">
@@ -55,7 +55,7 @@ export default function TemplateChoosen() {
           </div>
 
           {/* Main Content Area with White Background */}
-          <div className="bg-white min-h-screen px-4 sm:px-6 py-6">
+          <div className="bg-white px-4 sm:px-6 py-6 pb-20">
             <h2 className="text-2xl font-bold text-gray-900">Create Your Own Template</h2>
             <p className="text-gray-600 text-sm mt-1">Select a design for your daily gold rate poster</p>
             

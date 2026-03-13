@@ -12,7 +12,7 @@ export default function Register() {
       <div className="flex justify-center items-center min-h-screen ">
       <div className="w-full max-w-md min-h-screen bg-[#093D39] overflow-hidden relative p-6">
        
-          <h1 className="text-white !text-7xl font-serif text-center mt-25">
+          <h1 className="text-white !text-7xl font-serif text-center mt-15">
             Aurevia
           </h1>
           <p className="text-[#ffffffa9] text-center mb-8">
