@@ -22,6 +22,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const menuItems = [
     { href: "/home", label: "Home", icon: Home },
+    { href: "/profile", label: "Profile", icon: UserPlus },
     { href: "/chooseTemplate", label: "Choose Template", icon: FileText },
     {
       href: "/subscription-plan",
@@ -41,7 +42,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="absolute inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
+          className="absolute inset-0 ck bg-opacity-1 z-40 "
           onClick={onClose}
         />
       )}
